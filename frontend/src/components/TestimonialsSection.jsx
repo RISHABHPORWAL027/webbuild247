@@ -5,21 +5,21 @@ import { Button } from '@/components/ui/button';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      quote: "Got my business website ready in just 4 days. The team was responsive and understood exactly what I needed. Highly recommend for anyone looking for quick, quality work.",
-      author: "Rahul Sharma",
-      role: "Founder, TechStart India",
+      quote: "Got our agricultural platform ready in just 4 days. The team understood our vision perfectly and delivered a website that truly represents Ayekart's mission. Highly recommend for anyone looking for quick, quality work.",
+      author: "Abhishek Sharma",
+      role: "Founder, Ayekart",
       image: "https://images.unsplash.com/photo-1581065178047-8ee15951ede6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc3NDgxMzA1NXww&ixlib=rb-4.1.0&q=85"
     },
     {
-      quote: "I'm not tech-savvy at all, but they made the entire process so simple. Just shared my idea and they handled everything. My portfolio site looks amazing!",
-      author: "Priya Patel",
-      role: "Freelance Designer",
+      quote: "The AI-powered approach really does make a difference. Mobibulls Media website was up and running faster than I expected, and the performance is excellent. Great team to work with!",
+      author: "Rohit Gupta",
+      role: "Founder, Mobibulls Media",
       image: "https://images.pexels.com/photos/3777557/pexels-photo-3777557.jpeg"
     },
     {
-      quote: "The AI-powered approach really does make a difference. My e-commerce site was up and running faster than I expected, and the performance is excellent.",
-      author: "Amit Kumar",
-      role: "E-commerce Entrepreneur",
+      quote: "Building an AI platform needed a team that understands technology. They delivered Assitly's interface beautifully with a modern look that our users love. Fast turnaround and professional work.",
+      author: "Vikram Singh",
+      role: "Founder, Assitly AI",
       image: "https://images.unsplash.com/photo-1581065178047-8ee15951ede6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc3NDgxMzA1NXww&ixlib=rb-4.1.0&q=85"
     }
   ];
@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
                 />
                 <div className="text-left">
                   <p className="font-semibold text-white">{testimonials[currentIndex].author}</p>
-                  <p className="text-sm text-[#A1A1AA]">{testimonials[currentIndex].role}</p>
+                  <p className="text-sm text-[#FFD700]">{testimonials[currentIndex].role}</p>
                 </div>
               </div>
             </div>

@@ -1,0 +1,119 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 4 (Swiss & High-Contrast)",
+  "colors": {
+    "background": "#050505",
+    "surface": "#0a0a0a",
+    "surface_glass": "rgba(10, 10, 10, 0.6)",
+    "primary": "#FFD700",
+    "primary_hover": "#FFF0A0",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A1A1AA",
+    "border": "rgba(255, 255, 255, 0.1)",
+    "accent": "#FF3333"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Outfit",
+    "mono_font": "JetBrains Mono",
+    "h1": "text-5xl sm:text-6xl+ tracking-tighter font-black",
+    "h2": "text-3xl sm:text-4xl tracking-tight font-bold",
+    "h3": "text-xl sm:text-2xl font-semibold",
+    "h4": "text-lg sm:text-xl font-medium",
+    "overline": "text-xs tracking-[0.2em] uppercase font-mono text-primary",
+    "body": "text-base leading-relaxed text-text_secondary"
+  },
+  "spacing": {
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "grid_gap_tetris": "gap-8 md:gap-12",
+    "grid_gap_control": "gap-4 md:gap-6"
+  },
+  "surfaces": {
+    "header": "backdrop-blur-xl bg-[#050505]/70 border-b border-white/10 sticky top-0 z-50",
+    "card_flat": "bg-[#0a0a0a] border border-white/10 hover:-translate-y-1 hover:border-white/20 transition-all duration-300",
+    "card_grid_border": "border-r border-b border-white/10",
+    "button_primary": "bg-primary text-black font-bold tracking-wide hover:bg-primary_hover transition-colors",
+    "button_outline": "bg-transparent text-white border border-white/20 hover:border-white/50 transition-colors"
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1762279389042-9439bfb6c155?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMHRlY2glMjBiYWNrZ3JvdW5kJTIwZGFya3xlbnwwfHx8fDE3NzQ4MTMwNjF8MA&ixlib=rb-4.1.0&q=85",
+      "category": "hero",
+      "description": "Abstract neon lines for the hero section background to emphasize speed and AI. Apply max bg-black/50 overlay."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1677212004257-103cfa6b59d0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYWJzdHJhY3QlMjBkYXJrfGVufDB8fHx8MTc3NDgxMzA2Mnww&ixlib=rb-4.1.0&q=85",
+      "category": "ai_benefits",
+      "description": "AI glowing head abstract for the 'How AI Helps' section background or side visual."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1762330463863-a6a399beb5ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjB3ZWJzaXRlJTIwZGVzaWduJTIwdWl8ZW58MHx8fHwxNzc0ODEzMDU2fDA&ixlib=rb-4.1.0&q=85",
+      "category": "portfolio",
+      "description": "Portfolio item screenshot 1"
+    },
+    {
+      "url": "https://images.pexels.com/photos/5082577/pexels-photo-5082577.jpeg",
+      "category": "portfolio",
+      "description": "Portfolio item screenshot 2"
+    },
+    {
+      "url": "https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg",
+      "category": "portfolio",
+      "description": "Portfolio item screenshot 3"
+    },
+    {
+      "url": "https://images.pexels.com/photos/5496459/pexels-photo-5496459.jpeg",
+      "category": "about",
+      "description": "Developer coding laptop shot for the About Us / Expert Devs section."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1581065178047-8ee15951ede6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc3NDgxMzA1NXww&ixlib=rb-4.1.0&q=85",
+      "category": "testimonials",
+      "description": "Testimonial avatar 1"
+    },
+    {
+      "url": "https://images.pexels.com/photos/3777557/pexels-photo-3777557.jpeg",
+      "category": "testimonials",
+      "description": "Testimonial avatar 2"
+    }
+  ],
+  "sections": {
+    "hero": {
+      "layout": "Grid Cols 12, Content Span 8",
+      "visuals": "Hero image with bg-black/50 overlay. Stark white text. Yellow Primary CTA button.",
+      "components": ["button"],
+      "instructions": "Use font-black for H1. Subtitle must be text-xl text-text_secondary. Add a WhatsApp CTA button with outline style."
+    },
+    "about": {
+      "layout": "Asymmetric Split (5 cols / 7 cols)",
+      "instructions": "Contrast the AI speed with human expert imagery. Use the developer coding image. Generous padding."
+    },
+    "ai_benefits": {
+      "layout": "Mode B: Control Room Grid",
+      "instructions": "Use Shadcn Cards heavily customized with 'Terminal Look'. Dark background with neon green or yellow 1px borders for AI features."
+    },
+    "portfolio": {
+      "layout": "Mode A: Tetris Grid",
+      "instructions": "Mix col-span-8 and col-span-4 to create tension. Show screenshots. Each card must have a visible external link icon and link to a dummy URL."
+    },
+    "how_it_works": {
+      "layout": "Grid Borders (4 columns)",
+      "instructions": "4-step process. Expose the skeleton. border-r border-b border-white/10 on each step. Remove right border on the last item."
+    },
+    "contact": {
+      "layout": "Split 6/6",
+      "instructions": "Contact form for quote. Use Shadcn Input, Textarea, Button. Strip border radius (rounded-none). Background black. Form submission should be mocked with a toast notification saying 'Sent to Gmail'."
+    }
+  },
+  "instructions_to_main_agent": [
+    "INSTALL FONTS: Ensure Outfit and JetBrains Mono are imported via Google Fonts in index.css.",
+    "INSTALL ICONS: Use lucide-react (default) or install @phosphor-icons/react for high-end duotone icons.",
+    "TEST IDS: Add data-testid attributes to all interactive elements (e.g., data-testid='hero-cta-button').",
+    "COMPONENTS: Use Shadcn UI for form, accordion (FAQ), and carousel (Testimonials). Strip default border-radius and Vercel look. Make them flat, border-white/10.",
+    "LAYOUT: Use pure HTML/Tailwind for bento grids. Do not use Shadcn 'Card' wrapper for asymmetrical sections, use raw divs.",
+    "COLOR: Never use pure black #000000. Use the provided tinted background #050505.",
+    "NO PLACEHOLDERS: Use only the image URLs provided in this JSON.",
+    "CONTACT FORM: Since it says 'sends to Gmail', mock this action with an API route or client-side mock that shows a success Toast notification."
+  ]
+}

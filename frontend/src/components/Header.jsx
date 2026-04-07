@@ -39,9 +39,11 @@ const Header = ({ scrollToContact }) => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2" data-testid="logo">
-            <div className="w-10 h-10 bg-[#0A346C] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">D</span>
-            </div>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_quick-launch-109/artifacts/zvtds1lc_Gemini_Generated_Image_5dd9bw5dd9bw5dd9.png" 
+              alt="DevYug Solutions Logo"
+              className="w-10 h-10 object-contain"
+            />
             <span className="text-xl font-bold text-[#0A346C] hidden sm:block">
               DevYug<span className="text-[#3A5A85]">Solutions</span>
             </span>

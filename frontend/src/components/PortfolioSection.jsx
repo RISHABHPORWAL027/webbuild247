@@ -7,37 +7,43 @@ const PortfolioSection = () => {
       title: 'Ayekart',
       description: 'Agricultural supply chain platform',
       url: 'https://ayekart.com/',
-      category: 'Business'
+      category: 'Business',
+      image: 'https://customer-assets.emergentagent.com/job_quick-launch-109/artifacts/nyaejq15_image.png'
     },
     {
       title: 'Vyan Villa',
       description: 'Luxury villa booking website',
       url: 'https://vyanvilla.com/',
-      category: 'Hospitality'
+      category: 'Hospitality',
+      image: 'https://customer-assets.emergentagent.com/job_quick-launch-109/artifacts/742pwu9g_image.png'
     },
     {
       title: 'Uplers Platform',
       description: 'Professional talent hiring platform',
       url: 'https://platform.uplers.com/',
-      category: 'SaaS'
+      category: 'SaaS',
+      image: 'https://customer-assets.emergentagent.com/job_quick-launch-109/artifacts/ymt1veio_image.png'
     },
     {
       title: 'Mobibulls Media',
       description: 'Digital marketing agency website',
       url: 'https://mobibullsmedia.com/',
-      category: 'Agency'
+      category: 'Agency',
+      image: null
     },
     {
       title: 'ARC Robotics',
       description: 'Robotics company portfolio',
       url: 'https://www.arcrobotics.in/',
-      category: 'Technology'
+      category: 'Technology',
+      image: null
     },
     {
       title: 'Assitly AI',
       description: 'AI assistant platform UI',
       url: 'https://assitly-ai-ui-mspi.vercel.app/#',
-      category: 'SaaS'
+      category: 'SaaS',
+      image: null
     }
   ];
 
@@ -71,12 +77,20 @@ const PortfolioSection = () => {
               <div className="bg-[#F6F6F6] rounded-xl overflow-hidden hover:shadow-xl transition-all border border-gray-100 hover:border-[#0A346C]/20">
                 {/* Project Preview */}
                 <div className="aspect-video bg-gradient-to-br from-[#0A346C] to-[#3A5A85] flex items-center justify-center relative overflow-hidden">
-                  <div className="text-center text-white p-6">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                      <span className="text-2xl font-bold">{project.title[0]}</span>
+                  {project.image ? (
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="text-center text-white p-6">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                        <span className="text-2xl font-bold">{project.title[0]}</span>
+                      </div>
+                      <p className="text-lg font-semibold">{project.title}</p>
                     </div>
-                    <p className="text-lg font-semibold">{project.title}</p>
-                  </div>
+                  )}
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-[#0A346C]/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="text-center text-white">

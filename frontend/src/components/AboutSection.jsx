@@ -49,7 +49,7 @@ const AboutSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                <p className="text-3xl font-bold text-[#0A346C]">50+</p>
+                <p className="text-3xl font-bold text-[#0A346C]">10+</p>
                 <p className="text-sm text-[#718096]">Projects</p>
               </div>
               <div className="text-center p-4 bg-white rounded-xl shadow-sm">

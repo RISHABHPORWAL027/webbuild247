@@ -44,7 +44,7 @@ const HeroSection = ({ scrollToContact }) => {
                   </div>
                 ))}
               </div>
-              <span className="text-sm text-[#4A5568]">Trusted by <strong className="text-[#0A346C]">50+ businesses</strong></span>
+              <span className="text-sm text-[#4A5568]">Trusted by <strong className="text-[#0A346C]">10+ businesses</strong></span>
             </div>
 
             {/* Heading */}
@@ -103,7 +103,7 @@ const HeroSection = ({ scrollToContact }) => {
                 
                 <div className="space-y-6">
                   {[
-                    { number: '50+', label: 'Projects Delivered' },
+                    { number: '10+', label: 'Projects Delivered' },
                     { number: '2-5', label: 'Days Turnaround' },
                     { number: '100%', label: 'Client Satisfaction' },
                     { number: '24/7', label: 'Support Available' },

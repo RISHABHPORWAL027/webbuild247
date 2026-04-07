@@ -118,7 +118,8 @@ const HeroSection = ({ scrollToContact }) => {
                 {/* Free Domain Badge */}
                 <div className="mt-8 p-4 bg-white rounded-xl text-center">
                   <p className="text-[#0A346C] font-bold text-lg">🎁 Free Domain for 1 Year</p>
-                  <p className="text-[#4A5568] text-sm">With every website package</p>
+                  <p className="text-[#4A5568] text-sm">Upto ₹1000 value • With every website package</p>
+                  <p className="text-[#718096] text-xs mt-1">*T&C Apply</p>
                 </div>
               </div>
 

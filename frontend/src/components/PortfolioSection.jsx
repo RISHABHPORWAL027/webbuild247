@@ -29,21 +29,21 @@ const PortfolioSection = () => {
       description: 'Digital marketing agency website',
       url: 'https://mobibullsmedia.com/',
       category: 'Agency',
-      image: null
+      image: 'https://customer-assets.emergentagent.com/job_quick-launch-109/artifacts/ew5v4sdx_image.png'
     },
     {
       title: 'ARC Robotics',
       description: 'Robotics company portfolio',
       url: 'https://www.arcrobotics.in/',
       category: 'Technology',
-      image: null
+      image: 'https://customer-assets.emergentagent.com/job_quick-launch-109/artifacts/8m7nruys_image.png'
     },
     {
       title: 'Assitly AI',
       description: 'AI assistant platform UI',
       url: 'https://assitly-ai-ui-mspi.vercel.app/#',
       category: 'SaaS',
-      image: null
+      image: 'https://customer-assets.emergentagent.com/job_quick-launch-109/artifacts/4i0dl5q4_image.png'
     }
   ];
 
@@ -76,16 +76,16 @@ const PortfolioSection = () => {
             >
               <div className="bg-[#F6F6F6] rounded-xl overflow-hidden hover:shadow-xl transition-all border border-gray-100 hover:border-[#0A346C]/20">
                 {/* Project Preview */}
-                <div className="aspect-video bg-gradient-to-br from-[#0A346C] to-[#3A5A85] flex items-center justify-center relative overflow-hidden">
+                <div className="aspect-video bg-white border-b border-gray-200 flex items-center justify-center relative overflow-hidden p-4">
                   {project.image ? (
                     <img 
                       src={project.image} 
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className="max-w-full max-h-full object-contain"
                     />
                   ) : (
-                    <div className="text-center text-white p-6">
-                      <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                    <div className="text-center text-[#0A346C] p-6">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-[#0A346C]/10 rounded-xl flex items-center justify-center">
                         <span className="text-2xl font-bold">{project.title[0]}</span>
                       </div>
                       <p className="text-lg font-semibold">{project.title}</p>

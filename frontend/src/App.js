@@ -23,8 +23,13 @@ function App() {
     contactRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Update page title
+  React.useEffect(() => {
+    document.title = "DevYug Solutions - Professional Web Development in 2-5 Days";
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#050505]">
+    <div className="min-h-screen bg-white">
       <Toaster position="top-right" />
       <Header scrollToContact={scrollToContact} />
       <main>

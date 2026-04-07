@@ -1,7 +1,7 @@
-# webbuild247.com - Website PRD
+# DevYug Solutions - Website PRD
 
 ## Original Problem Statement
-Build a landing page website for webbuild247.com - a web development agency that uses AI + expert development to deliver websites in 2-5 days.
+Build a professional landing page website for devyugsolutions.com - a web development agency that delivers websites in 2-5 days.
 
 ## User Personas
 - **Business Owners**: Need a professional website quickly and affordably
@@ -12,54 +12,43 @@ Build a landing page website for webbuild247.com - a web development agency that
 ## Core Requirements
 1. Hero section with value proposition (2-5 day delivery)
 2. About Us section
-3. AI Benefits section
-4. Features/What You Get section
+3. How We Deliver Excellence section
+4. Features/What's Included section
 5. Services section (no pricing, contact for quote)
 6. How It Works (4-step process)
-7. Portfolio with screenshots and links
+7. Portfolio with 6 projects
 8. Why Choose Us section
-9. Testimonials carousel
+9. Testimonials (real client names, initials only)
 10. FAQ accordion
 11. Blog section
-12. Contact form (mailto) + WhatsApp integration
-13. Sticky header with navigation
-14. Footer with CTA and links
+12. Contact form (mailto: hello@devyugsolutions.com) + WhatsApp (+91 7771834791)
+13. Professional light theme
+
+## Design System
+- **Primary**: #0A346C (dark blue)
+- **Secondary**: #3A5A85 (lighter blue)
+- **Neutral**: #F6F6F6 (light gray)
+- **Font**: Inter
+- **Style**: Clean, professional, trustworthy
 
 ## What's Been Implemented (Dec 2024)
-- [x] Full landing page with all 12+ sections
-- [x] Dark theme (#050505) with gold (#FFD700) accents
-- [x] Outfit + JetBrains Mono typography
-- [x] Contact form opens mailto:porwal027@gmail.com
-- [x] WhatsApp integration (+91 7771834791)
-- [x] Portfolio section with 6 projects and links
+- [x] Complete redesign with light professional theme
+- [x] DevYugSolutions branding throughout
+- [x] Contact: hello@devyugsolutions.com
+- [x] WhatsApp: +91 7771834791
+- [x] Portfolio section with 6 projects
+- [x] Real testimonials: Abhishek Sharma (Ayekart), Rohit Gupta (Mobibulls), Vikram Singh (Assitly AI)
 - [x] FAQ with 8 expandable questions
-- [x] Testimonials carousel with navigation
-- [x] Mobile responsive design with hamburger menu
-- [x] Smooth scroll navigation
-- [x] All data-testid attributes for testing
+- [x] Mobile responsive design
+- [x] Professional page title
 
 ## Tech Stack
 - Frontend: React 19 + Tailwind CSS + Shadcn UI
-- Backend: FastAPI (not actively used for this landing page)
+- Backend: FastAPI (not actively used)
 - Database: MongoDB (available but not used)
 
-## Prioritized Backlog
-### P0 (Critical) - DONE
-- All core sections implemented
-
-### P1 (Important)
-- Add actual portfolio screenshots from client websites
-- Integrate email service (Resend) for direct form submission
-- Add Google Analytics tracking
-
-### P2 (Nice to Have)
-- Blog CMS integration
-- Live chat widget
-- Client dashboard for project tracking
-- Multi-language support
-
 ## Next Tasks
-1. Replace placeholder images with actual client website screenshots
-2. Connect email service for form submissions
-3. Add SEO meta tags
-4. Set up domain (webbuild247.com)
+1. Add actual portfolio screenshots
+2. Set up domain (devyugsolutions.com)
+3. Add Google Analytics
+4. SEO meta tags optimization

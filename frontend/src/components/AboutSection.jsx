@@ -1,74 +1,83 @@
 import React from 'react';
-import { Target, Users, Rocket } from 'lucide-react';
+import { Target, Users, Rocket, Heart } from 'lucide-react';
 
 const AboutSection = () => {
   const values = [
     {
       icon: Rocket,
-      title: 'Fast & Modern',
-      description: 'Websites built with cutting-edge technology for speed and performance.'
+      title: 'Fast Delivery',
+      description: 'Get your website live in just 2-5 business days, not weeks or months.'
     },
     {
       icon: Users,
-      title: 'Simple Process',
-      description: 'No technical knowledge needed. We handle everything for you.'
+      title: 'Expert Team',
+      description: 'Skilled developers and designers dedicated to your project success.'
     },
     {
       icon: Target,
-      title: 'High Quality, Low Cost',
-      description: 'Professional results without breaking your budget.'
+      title: 'Result Focused',
+      description: 'Websites designed to convert visitors into paying customers.'
+    },
+    {
+      icon: Heart,
+      title: 'Client First',
+      description: 'Your satisfaction is our priority. We work until you are 100% happy.'
     }
   ];
 
   return (
-    <section id="about" data-testid="about-section" className="py-24 md:py-32 relative">
-      <div className="absolute inset-0 grid-pattern opacity-50" />
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-12 gap-8 md:gap-12 items-center">
-          {/* Image Column */}
-          <div className="col-span-12 lg:col-span-5">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-[#FFD700]/10 blur-3xl" />
-              <img
-                src="https://images.pexels.com/photos/5496459/pexels-photo-5496459.jpeg"
-                alt="Developer coding"
-                className="relative w-full aspect-square object-cover border border-white/10"
-                data-testid="about-image"
-              />
+    <section id="about" data-testid="about-section" className="py-20 lg:py-28 bg-[#F6F6F6]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Content */}
+          <div>
+            <p className="text-sm font-semibold text-[#0A346C] uppercase tracking-wider mb-3">
+              About DevYug Solutions
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A2E] mb-6 leading-tight">
+              Your Trusted Partner for
+              <br />
+              <span className="text-[#0A346C]">Professional Web Development</span>
+            </h2>
+            <p className="text-lg text-[#4A5568] mb-8 leading-relaxed">
+              At DevYug Solutions, we understand that your website is often the first impression customers have of your business. That's why we combine cutting-edge technology with creative design to build websites that not only look stunning but also drive real business results.
+            </p>
+            <p className="text-base text-[#4A5568] mb-8 leading-relaxed">
+              With over 50 successful projects delivered, we've helped businesses of all sizes establish their online presence quickly and affordably. Our streamlined process ensures you get a professional website without the typical agency delays and high costs.
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6">
+              <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                <p className="text-3xl font-bold text-[#0A346C]">50+</p>
+                <p className="text-sm text-[#718096]">Projects</p>
+              </div>
+              <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                <p className="text-3xl font-bold text-[#0A346C]">100%</p>
+                <p className="text-sm text-[#718096]">Satisfaction</p>
+              </div>
+              <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                <p className="text-3xl font-bold text-[#0A346C]">5+</p>
+                <p className="text-sm text-[#718096]">Years Exp.</p>
+              </div>
             </div>
           </div>
 
-          {/* Content Column */}
-          <div className="col-span-12 lg:col-span-7">
-            <p className="text-xs tracking-[0.2em] uppercase font-mono text-[#FFD700] mb-4">
-              About Us
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6">
-              We Build Your Online Presence
-              <br />
-              <span className="text-[#A1A1AA]">Without The Stress</span>
-            </h2>
-            <p className="text-base leading-relaxed text-[#A1A1AA] mb-8">
-              We help businesses, startups, and individuals create their online presence quickly and affordably. 
-              By combining AI tools with expert developers, we reduce time, cost, and errors — so you get a 
-              professional website faster than traditional agencies.
-            </p>
-
-            {/* Values Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {values.map((value, index) => (
-                <div 
-                  key={index}
-                  className="p-5 bg-[#0a0a0a] border border-white/10 card-hover"
-                  data-testid={`about-value-${index}`}
-                >
-                  <value.icon size={24} className="text-[#FFD700] mb-3" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{value.title}</h3>
-                  <p className="text-sm text-[#A1A1AA]">{value.description}</p>
+          {/* Values Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {values.map((value, index) => (
+              <div 
+                key={index}
+                className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                data-testid={`about-value-${index}`}
+              >
+                <div className="w-12 h-12 bg-[#0A346C] rounded-lg flex items-center justify-center mb-4">
+                  <value.icon size={24} className="text-white" />
                 </div>
-              ))}
-            </div>
+                <h3 className="text-lg font-semibold text-[#1A1A2E] mb-2">{value.title}</h3>
+                <p className="text-sm text-[#4A5568] leading-relaxed">{value.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, MessageCircle, Mail, ArrowRight } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -29,7 +29,7 @@ const ContactSection = () => {
     );
     
     // Open mailto
-    window.location.href = `mailto:porwal027@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hello@devyugsolutions.com?subject=${subject}&body=${body}`;
     
     // Show success toast
     setTimeout(() => {
@@ -48,79 +48,83 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" data-testid="contact-section" className="py-24 md:py-32 bg-[#0a0a0a]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-12 gap-8 md:gap-12">
+    <section id="contact" data-testid="contact-section" className="py-20 lg:py-28 bg-[#F6F6F6]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column - Info */}
-          <div className="col-span-12 lg:col-span-6">
-            <p className="text-xs tracking-[0.2em] uppercase font-mono text-[#FFD700] mb-4">
+          <div>
+            <p className="text-sm font-semibold text-[#0A346C] uppercase tracking-wider mb-3">
               Get In Touch
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6">
-              Ready to Start Your Project?
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A2E] mb-6 leading-tight">
+              Ready to Start
+              <br />
+              <span className="text-[#0A346C]">Your Project?</span>
             </h2>
-            <p className="text-base text-[#A1A1AA] mb-8 leading-relaxed">
-              Get your website ready in just 5 days. Share your idea with us and we'll get back to you within 24 hours.
+            <p className="text-lg text-[#4A5568] mb-8 leading-relaxed">
+              Get your website ready in just 5 days. Share your idea with us and we'll get back to you within 24 hours with a free consultation.
             </p>
 
-            {/* Quick Contact Options */}
+            {/* Contact Info */}
             <div className="space-y-4 mb-8">
               <a 
-                href="mailto:porwal027@gmail.com"
-                className="flex items-center gap-4 p-4 bg-[#050505] border border-white/10 hover:border-white/20 transition-colors group"
+                href="mailto:hello@devyugsolutions.com"
+                className="flex items-center gap-4 p-4 bg-white rounded-xl hover:shadow-md transition-shadow group"
                 data-testid="contact-email-link"
               >
-                <div className="p-3 bg-white/5 border border-white/10">
-                  <Mail size={20} className="text-[#FFD700]" />
+                <div className="w-12 h-12 bg-[#0A346C] rounded-xl flex items-center justify-center">
+                  <Mail size={20} className="text-white" />
                 </div>
                 <div>
-                  <p className="text-sm text-[#A1A1AA]">Email us</p>
-                  <p className="text-white font-medium group-hover:text-[#FFD700] transition-colors">porwal027@gmail.com</p>
+                  <p className="text-sm text-[#718096]">Email us</p>
+                  <p className="text-[#1A1A2E] font-medium group-hover:text-[#0A346C] transition-colors">hello@devyugsolutions.com</p>
                 </div>
-                <ArrowRight size={18} className="text-white/30 ml-auto group-hover:text-[#FFD700] transition-colors" />
+                <ArrowRight size={18} className="text-gray-400 ml-auto group-hover:text-[#0A346C] transition-colors" />
               </a>
 
               <button 
                 onClick={handleWhatsApp}
-                className="w-full flex items-center gap-4 p-4 bg-[#050505] border border-white/10 hover:border-[#25D366]/50 transition-colors group text-left"
+                className="w-full flex items-center gap-4 p-4 bg-white rounded-xl hover:shadow-md transition-shadow group text-left"
                 data-testid="contact-whatsapp-link"
               >
-                <div className="p-3 bg-[#25D366]/10 border border-[#25D366]/30">
-                  <MessageCircle size={20} className="text-[#25D366]" />
+                <div className="w-12 h-12 bg-[#25D366] rounded-xl flex items-center justify-center">
+                  <Phone size={20} className="text-white" />
                 </div>
                 <div>
-                  <p className="text-sm text-[#A1A1AA]">WhatsApp (Faster Response)</p>
-                  <p className="text-white font-medium group-hover:text-[#25D366] transition-colors">+91 7771834791</p>
+                  <p className="text-sm text-[#718096]">WhatsApp (Faster Response)</p>
+                  <p className="text-[#1A1A2E] font-medium group-hover:text-[#25D366] transition-colors">+91 7771834791</p>
                 </div>
-                <ArrowRight size={18} className="text-white/30 ml-auto group-hover:text-[#25D366] transition-colors" />
+                <ArrowRight size={18} className="text-gray-400 ml-auto group-hover:text-[#25D366] transition-colors" />
               </button>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="p-4 border border-white/10 text-center">
-                <p className="text-2xl font-bold text-[#FFD700]">2-5</p>
-                <p className="text-xs text-[#A1A1AA]">Days Delivery</p>
-              </div>
-              <div className="p-4 border border-white/10 text-center">
-                <p className="text-2xl font-bold text-[#FFD700]">24h</p>
-                <p className="text-xs text-[#A1A1AA]">Response Time</p>
-              </div>
-              <div className="p-4 border border-white/10 text-center">
-                <p className="text-2xl font-bold text-[#FFD700]">100%</p>
-                <p className="text-xs text-[#A1A1AA]">Satisfaction</p>
+            {/* Why Contact Us */}
+            <div className="bg-white rounded-xl p-6">
+              <h4 className="font-semibold text-[#1A1A2E] mb-4">What You'll Get:</h4>
+              <div className="space-y-3">
+                {[
+                  'Free project consultation',
+                  'Custom quote within 24 hours',
+                  'No obligation, no pressure',
+                  'Expert advice on your needs'
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle size={18} className="text-green-500 flex-shrink-0" />
+                    <span className="text-[#4A5568]">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
           {/* Right Column - Form */}
-          <div className="col-span-12 lg:col-span-6">
-            <form onSubmit={handleSubmit} className="p-8 bg-[#050505] border border-white/10" data-testid="contact-form">
-              <h3 className="text-xl font-semibold text-white mb-6">Send us a message</h3>
+          <div>
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-lg" data-testid="contact-form">
+              <h3 className="text-2xl font-bold text-[#1A1A2E] mb-6">Send Us a Message</h3>
               
               <div className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm text-[#A1A1AA] mb-2">Your Name *</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-[#1A1A2E] mb-2">Your Name *</label>
                   <Input
                     id="name"
                     name="name"
@@ -128,13 +132,13 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     placeholder="John Doe"
-                    className="bg-[#0a0a0a] border-white/10 text-white placeholder:text-white/30 rounded-none focus:border-[#FFD700] focus:ring-[#FFD700]/20 form-input"
+                    className="bg-[#F6F6F6] border-gray-200 text-[#1A1A2E] placeholder:text-gray-400 rounded-lg focus:border-[#0A346C] focus:ring-[#0A346C]/20"
                     data-testid="contact-name-input"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm text-[#A1A1AA] mb-2">Email Address *</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-[#1A1A2E] mb-2">Email Address *</label>
                   <Input
                     id="email"
                     name="email"
@@ -143,13 +147,13 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     placeholder="john@example.com"
-                    className="bg-[#0a0a0a] border-white/10 text-white placeholder:text-white/30 rounded-none focus:border-[#FFD700] focus:ring-[#FFD700]/20 form-input"
+                    className="bg-[#F6F6F6] border-gray-200 text-[#1A1A2E] placeholder:text-gray-400 rounded-lg focus:border-[#0A346C] focus:ring-[#0A346C]/20"
                     data-testid="contact-email-input"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm text-[#A1A1AA] mb-2">Phone Number</label>
+                  <label htmlFor="phone" className="block text-sm font-medium text-[#1A1A2E] mb-2">Phone Number</label>
                   <Input
                     id="phone"
                     name="phone"
@@ -157,13 +161,13 @@ const ContactSection = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 XXXXX XXXXX"
-                    className="bg-[#0a0a0a] border-white/10 text-white placeholder:text-white/30 rounded-none focus:border-[#FFD700] focus:ring-[#FFD700]/20 form-input"
+                    className="bg-[#F6F6F6] border-gray-200 text-[#1A1A2E] placeholder:text-gray-400 rounded-lg focus:border-[#0A346C] focus:ring-[#0A346C]/20"
                     data-testid="contact-phone-input"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm text-[#A1A1AA] mb-2">Tell us about your project *</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-[#1A1A2E] mb-2">Tell us about your project *</label>
                   <Textarea
                     id="message"
                     name="message"
@@ -172,7 +176,7 @@ const ContactSection = () => {
                     required
                     rows={4}
                     placeholder="Describe your business and what kind of website you need..."
-                    className="bg-[#0a0a0a] border-white/10 text-white placeholder:text-white/30 rounded-none focus:border-[#FFD700] focus:ring-[#FFD700]/20 resize-none form-input"
+                    className="bg-[#F6F6F6] border-gray-200 text-[#1A1A2E] placeholder:text-gray-400 rounded-lg focus:border-[#0A346C] focus:ring-[#0A346C]/20 resize-none"
                     data-testid="contact-message-input"
                   />
                 </div>
@@ -180,16 +184,16 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#FFD700] text-black font-bold hover:bg-[#FFF0A0] rounded-none py-6 btn-shine"
+                  className="w-full bg-[#0A346C] text-white font-semibold hover:bg-[#0D4080] rounded-lg py-6 shadow-lg hover:shadow-xl transition-all"
                   data-testid="contact-submit-btn"
                 >
                   {isSubmitting ? 'Opening Email...' : 'Send Message'}
                   <Send className="ml-2" size={18} />
                 </Button>
 
-                <p className="text-xs text-center text-[#A1A1AA]">
+                <p className="text-sm text-center text-[#718096]">
                   Or reach us faster via{' '}
-                  <button type="button" onClick={handleWhatsApp} className="text-[#25D366] hover:underline">
+                  <button type="button" onClick={handleWhatsApp} className="text-[#25D366] font-medium hover:underline">
                     WhatsApp
                   </button>
                 </p>

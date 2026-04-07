@@ -33,8 +33,8 @@ const FAQSection = () => {
       answer: "We offer quick revision rounds during the project. After launch, we provide support for minor changes. For major updates, we can discuss ongoing maintenance plans."
     },
     {
-      question: "How do you use AI in website development?",
-      answer: "We use AI to speed up coding, improve design accuracy, and reduce errors. This means faster delivery and lower costs for you, while maintaining high quality through expert developer oversight."
+      question: "How do you ensure quality?",
+      answer: "We follow a rigorous quality process including design reviews, functionality testing, mobile responsiveness checks, and performance optimization before delivery."
     },
     {
       question: "Will my website work on mobile phones?",
@@ -43,18 +43,18 @@ const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" data-testid="faq-section" className="py-24 md:py-32 bg-[#0a0a0a]">
-      <div className="max-w-4xl mx-auto px-6 md:px-12">
+    <section id="faq" data-testid="faq-section" className="py-20 lg:py-28 bg-[#F6F6F6]">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.2em] uppercase font-mono text-[#FFD700] mb-4">
+          <p className="text-sm font-semibold text-[#0A346C] uppercase tracking-wider mb-3">
             FAQ
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A2E] mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-base text-[#A1A1AA]">
-            Got questions? We've got answers.
+          <p className="text-lg text-[#4A5568]">
+            Got questions? We've got answers. If you don't find what you're looking for, feel free to contact us.
           </p>
         </div>
 
@@ -64,13 +64,13 @@ const FAQSection = () => {
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="border border-white/10 bg-[#050505] px-6"
+              className="bg-white rounded-xl border border-gray-200 px-6 overflow-hidden"
               data-testid={`faq-item-${index}`}
             >
-              <AccordionTrigger className="text-left text-white hover:text-[#FFD700] hover:no-underline py-5 text-base font-medium">
+              <AccordionTrigger className="text-left text-[#1A1A2E] hover:text-[#0A346C] hover:no-underline py-5 text-base font-medium">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-[#A1A1AA] pb-5 text-sm leading-relaxed">
+              <AccordionContent className="text-[#4A5568] pb-5 leading-relaxed">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

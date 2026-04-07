@@ -7,97 +7,96 @@ const PortfolioSection = () => {
       title: 'Ayekart',
       description: 'Agricultural supply chain platform',
       url: 'https://ayekart.com/',
-      image: 'https://images.unsplash.com/photo-1762330463863-a6a399beb5ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjB3ZWJzaXRlJTIwZGVzaWduJTIwdWl8ZW58MHx8fHwxNzc0ODEzMDU2fDA&ixlib=rb-4.1.0&q=85',
-      span: 'col-span-12 md:col-span-8'
+      category: 'Business'
     },
     {
       title: 'Vyan Villa',
       description: 'Luxury villa booking website',
       url: 'https://vyanvilla.com/',
-      image: 'https://images.pexels.com/photos/5082577/pexels-photo-5082577.jpeg',
-      span: 'col-span-12 md:col-span-4'
+      category: 'Hospitality'
     },
     {
       title: 'Uplers Platform',
       description: 'Professional talent hiring platform',
       url: 'https://platform.uplers.com/',
-      image: 'https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg',
-      span: 'col-span-12 md:col-span-4'
+      category: 'SaaS'
     },
     {
       title: 'Mobibulls Media',
       description: 'Digital marketing agency website',
       url: 'https://mobibullsmedia.com/',
-      image: 'https://images.pexels.com/photos/5496459/pexels-photo-5496459.jpeg',
-      span: 'col-span-12 md:col-span-8'
+      category: 'Agency'
     },
     {
       title: 'ARC Robotics',
       description: 'Robotics company portfolio',
       url: 'https://www.arcrobotics.in/',
-      image: 'https://images.unsplash.com/photo-1677212004257-103cfa6b59d0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYWJzdHJhY3QlMjBkYXJrfGVufDB8fHx8MTc3NDgxMzA2Mnww&ixlib=rb-4.1.0&q=85',
-      span: 'col-span-12 md:col-span-6'
+      category: 'Technology'
     },
     {
       title: 'Assitly AI',
       description: 'AI assistant platform UI',
       url: 'https://assitly-ai-ui-mspi.vercel.app/#',
-      image: 'https://images.unsplash.com/photo-1762279389042-9439bfb6c155?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMHRlY2glMjBiYWNrZ3JvdW5kJTIwZGFya3xlbnwwfHx8fDE3NzQ4MTMwNjF8MA&ixlib=rb-4.1.0&q=85',
-      span: 'col-span-12 md:col-span-6'
+      category: 'SaaS'
     }
   ];
 
   return (
-    <section id="portfolio" data-testid="portfolio-section" className="py-24 md:py-32 relative">
-      <div className="absolute inset-0 grid-pattern opacity-30" />
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+    <section id="portfolio" data-testid="portfolio-section" className="py-20 lg:py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.2em] uppercase font-mono text-[#FFD700] mb-4">
-            Our Work
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <p className="text-sm font-semibold text-[#0A346C] uppercase tracking-wider mb-3">
+            Our Portfolio
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
-            Recent Projects
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A2E] mb-4">
+            Projects We're Proud Of
           </h2>
-          <p className="text-base text-[#A1A1AA] max-w-2xl mx-auto">
-            See what we've built for our clients. Each project is delivered fast with quality.
+          <p className="text-lg text-[#4A5568]">
+            Real websites we've built for real businesses. Each project delivered with quality and care.
           </p>
         </div>
 
-        {/* Portfolio Grid - Tetris Style */}
-        <div className="grid grid-cols-12 gap-4 md:gap-6">
+        {/* Portfolio Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <a
               key={index}
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${project.span} group portfolio-item relative overflow-hidden border border-white/10 card-hover`}
+              className="group block"
               data-testid={`portfolio-${index}`}
             >
-              {/* Image */}
-              <div className="aspect-[16/10] w-full relative">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/50 to-transparent" />
-              </div>
-              
-              {/* Content Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="flex items-end justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-[#FFD700] transition-colors">
+              <div className="bg-[#F6F6F6] rounded-xl overflow-hidden hover:shadow-xl transition-all border border-gray-100 hover:border-[#0A346C]/20">
+                {/* Project Preview */}
+                <div className="aspect-video bg-gradient-to-br from-[#0A346C] to-[#3A5A85] flex items-center justify-center relative overflow-hidden">
+                  <div className="text-center text-white p-6">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                      <span className="text-2xl font-bold">{project.title[0]}</span>
+                    </div>
+                    <p className="text-lg font-semibold">{project.title}</p>
+                  </div>
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-[#0A346C]/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="text-center text-white">
+                      <ExternalLink size={32} className="mx-auto mb-2" />
+                      <p className="font-medium">Visit Website</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Project Info */}
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold text-[#1A1A2E] group-hover:text-[#0A346C] transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-[#A1A1AA]">{project.description}</p>
+                    <span className="px-3 py-1 bg-[#0A346C]/10 text-[#0A346C] text-xs font-medium rounded-full">
+                      {project.category}
+                    </span>
                   </div>
-                  <div className="p-2 bg-white/10 border border-white/20 group-hover:bg-[#FFD700] group-hover:border-[#FFD700] transition-all">
-                    <ExternalLink size={18} className="text-white group-hover:text-black transition-colors" />
-                  </div>
+                  <p className="text-[#4A5568]">{project.description}</p>
                 </div>
               </div>
             </a>

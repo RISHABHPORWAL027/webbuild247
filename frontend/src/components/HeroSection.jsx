@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Zap, Clock, Gift, MessageCircle, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Clock, Shield, Award, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = ({ scrollToContact }) => {
@@ -7,161 +7,148 @@ const HeroSection = ({ scrollToContact }) => {
     window.open('https://wa.me/917771834791?text=Hi, I am interested in getting a website built.', '_blank');
   };
 
-  const stats = [
-    { value: '50+', label: 'Projects Delivered' },
-    { value: '2-5', label: 'Days Turnaround' },
-    { value: '100%', label: 'Client Satisfaction' },
+  const trustBadges = [
+    { icon: Clock, text: '2-5 Days Delivery' },
+    { icon: Shield, text: '100% Satisfaction' },
+    { icon: Award, text: 'Premium Quality' },
   ];
 
-  const features = [
-    'AI-Powered Development',
-    'Free 1-Year Domain',
-    'Mobile Responsive',
-    'SEO Optimized',
+  const clients = [
+    'Ayekart', 'Vyan Villa', 'Uplers', 'Mobibulls', 'ARC Robotics'
   ];
 
   return (
     <section 
       data-testid="hero-section"
-      className="relative min-h-screen pt-20 overflow-hidden"
+      className="relative pt-20 overflow-hidden bg-white"
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-[#050505]">
-        {/* Gradient orbs */}
-        <div className="absolute top-20 left-10 w-[500px] h-[500px] bg-[#FFD700]/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-[400px] h-[400px] bg-[#FFD700]/5 rounded-full blur-[100px]" />
-        
-        {/* Grid lines */}
-        <div className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, #FFD700 1px, transparent 1px),
-              linear-gradient(to bottom, #FFD700 1px, transparent 1px)
-            `,
-            backgroundSize: '80px 80px'
-          }}
-        />
-      </div>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(#0A346C 1px, transparent 1px)`,
+          backgroundSize: '20px 20px'
+        }}
+      />
 
-      {/* Main Content - Bento Grid Layout */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20">
-        <div className="grid grid-cols-12 gap-4 md:gap-6 min-h-[80vh] items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          {/* Main Hero Content - Large Card */}
-          <div className="col-span-12 lg:col-span-7 row-span-2">
-            <div className="h-full p-8 md:p-12 border border-white/10 bg-gradient-to-br from-[#0a0a0a] to-[#050505] relative overflow-hidden">
-              {/* Decorative corner */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFD700]/10 blur-3xl" />
-              
-              <div className="relative z-10">
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFD700]/10 border border-[#FFD700]/30 mb-8">
-                  <Zap size={14} className="text-[#FFD700]" />
-                  <span className="text-xs font-mono tracking-wider text-[#FFD700]">AI + EXPERT DEVELOPERS</span>
-                </div>
-
-                {/* Heading */}
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight text-white leading-[1.1] mb-6">
-                  Your Website
-                  <br />
-                  <span className="relative">
-                    <span className="text-[#FFD700]">Ready in 5 Days</span>
-                    <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
-                      <path d="M2 10C50 4 150 2 298 6" stroke="#FFD700" strokeWidth="3" strokeLinecap="round" opacity="0.5"/>
-                    </svg>
-                  </span>
-                </h1>
-
-                {/* Description */}
-                <p className="text-lg md:text-xl text-[#A1A1AA] max-w-lg mb-8 leading-relaxed">
-                  Stop waiting months. We combine <span className="text-white">AI precision</span> with <span className="text-white">expert craftsmanship</span> to launch your business online — fast.
-                </p>
-
-                {/* CTA Buttons */}
-                <div className="flex flex-wrap gap-4">
-                  <Button
-                    onClick={scrollToContact}
-                    size="lg"
-                    className="bg-[#FFD700] text-black font-bold hover:bg-[#FFF0A0] rounded-none px-8 py-6 text-base group"
-                    data-testid="hero-get-started-btn"
-                  >
-                    Start Your Project
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                  </Button>
-                  <Button
-                    onClick={handleWhatsApp}
-                    variant="outline"
-                    size="lg"
-                    className="border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10 rounded-none px-8 py-6 text-base"
-                    data-testid="hero-whatsapp-btn"
-                  >
-                    <MessageCircle className="mr-2" size={18} />
-                    WhatsApp Us
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Stats Card */}
-          <div className="col-span-12 sm:col-span-6 lg:col-span-5">
-            <div className="h-full p-6 md:p-8 border border-white/10 bg-[#0a0a0a]">
-              <p className="text-xs font-mono text-[#FFD700] mb-6 tracking-wider">// OUR TRACK RECORD</p>
-              <div className="grid grid-cols-3 gap-4">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <p className="text-3xl md:text-4xl font-black text-white mb-1">{stat.value}</p>
-                    <p className="text-xs text-[#A1A1AA]">{stat.label}</p>
+          {/* Left Content */}
+          <div className="order-2 lg:order-1">
+            {/* Trust indicator */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#F6F6F6] rounded-full mb-6 animate-fade-in-up opacity-0 stagger-1">
+              <div className="flex -space-x-2">
+                {[...Array(4)].map((_, i) => (
+                  <div key={i} className="w-6 h-6 rounded-full bg-[#0A346C] border-2 border-white flex items-center justify-center">
+                    <span className="text-[8px] text-white font-bold">{['A', 'V', 'U', 'M'][i]}</span>
                   </div>
                 ))}
               </div>
+              <span className="text-sm text-[#4A5568]">Trusted by <strong className="text-[#0A346C]">50+ businesses</strong></span>
             </div>
-          </div>
 
-          {/* Features Checklist Card */}
-          <div className="col-span-12 sm:col-span-6 lg:col-span-5">
-            <div className="h-full p-6 md:p-8 border border-[#FFD700]/30 bg-gradient-to-br from-[#FFD700]/5 to-transparent">
-              <p className="text-xs font-mono text-[#FFD700] mb-6 tracking-wider">// WHAT'S INCLUDED</p>
-              <div className="grid grid-cols-2 gap-3">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <CheckCircle size={16} className="text-[#FFD700] flex-shrink-0" />
-                    <span className="text-sm text-white">{feature}</span>
+            {/* Heading */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1A2E] leading-tight mb-6 animate-fade-in-up opacity-0 stagger-2">
+              We Build Websites
+              <br />
+              <span className="text-[#0A346C]">That Grow Your Business</span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-lg text-[#4A5568] max-w-xl mb-8 leading-relaxed animate-fade-in-up opacity-0 stagger-3">
+              Professional website development in just 2-5 days. We combine modern technology with expert craftsmanship to deliver websites that convert visitors into customers.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 mb-10 animate-fade-in-up opacity-0 stagger-4">
+              <Button
+                onClick={scrollToContact}
+                size="lg"
+                className="bg-[#0A346C] text-white hover:bg-[#0D4080] rounded-lg px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all"
+                data-testid="hero-get-started-btn"
+              >
+                Get Free Consultation
+                <ArrowRight className="ml-2" size={18} />
+              </Button>
+              <Button
+                onClick={handleWhatsApp}
+                variant="outline"
+                size="lg"
+                className="border-2 border-[#0A346C] text-[#0A346C] hover:bg-[#0A346C] hover:text-white rounded-lg px-8 py-6 text-base font-semibold"
+                data-testid="hero-whatsapp-btn"
+              >
+                Chat on WhatsApp
+              </Button>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="flex flex-wrap gap-6 animate-fade-in-up opacity-0 stagger-4">
+              {trustBadges.map((badge, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-lg bg-[#F6F6F6] flex items-center justify-center">
+                    <badge.icon size={20} className="text-[#0A346C]" />
                   </div>
-                ))}
-              </div>
+                  <span className="text-sm font-medium text-[#4A5568]">{badge.text}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Delivery Badge - Small Card */}
-          <div className="col-span-6 lg:col-span-2">
-            <div className="h-full p-6 border border-white/10 bg-[#0a0a0a] flex flex-col items-center justify-center text-center">
-              <Clock size={28} className="text-[#FFD700] mb-3" />
-              <p className="text-2xl font-black text-white">2-5</p>
-              <p className="text-xs text-[#A1A1AA]">Days Delivery</p>
+          {/* Right Content - Stats Card */}
+          <div className="order-1 lg:order-2">
+            <div className="relative">
+              {/* Main Card */}
+              <div className="bg-gradient-to-br from-[#0A346C] to-[#3A5A85] rounded-2xl p-8 lg:p-10 text-white shadow-2xl">
+                <h3 className="text-2xl font-bold mb-8">Why Choose DevYug?</h3>
+                
+                <div className="space-y-6">
+                  {[
+                    { number: '50+', label: 'Projects Delivered' },
+                    { number: '2-5', label: 'Days Turnaround' },
+                    { number: '100%', label: 'Client Satisfaction' },
+                    { number: '24/7', label: 'Support Available' },
+                  ].map((stat, index) => (
+                    <div key={index} className="flex items-center gap-4 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                      <span className="text-3xl font-bold">{stat.number}</span>
+                      <span className="text-white/90">{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Free Domain Badge */}
+                <div className="mt-8 p-4 bg-white rounded-xl text-center">
+                  <p className="text-[#0A346C] font-bold text-lg">🎁 Free Domain for 1 Year</p>
+                  <p className="text-[#4A5568] text-sm">With every website package</p>
+                </div>
+              </div>
+
+              {/* Floating Badge */}
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl p-4 shadow-xl border border-gray-100 hidden lg:block">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="text-green-600" size={24} />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#1A1A2E]">Verified Agency</p>
+                    <p className="text-sm text-[#4A5568]">Trusted Partner</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* Free Domain Badge */}
-          <div className="col-span-6 lg:col-span-3">
-            <div className="h-full p-6 border border-white/10 bg-[#0a0a0a] flex items-center gap-4">
-              <div className="p-3 bg-[#FFD700]/10 border border-[#FFD700]/30">
-                <Gift size={24} className="text-[#FFD700]" />
-              </div>
-              <div>
-                <p className="text-lg font-bold text-white">Free Domain</p>
-                <p className="text-xs text-[#A1A1AA]">1 Year Included</p>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
 
-      {/* Bottom scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="text-xs text-[#A1A1AA] tracking-wider">SCROLL</span>
-        <div className="w-[1px] h-8 bg-gradient-to-b from-[#FFD700] to-transparent animate-pulse" />
+        {/* Clients Section */}
+        <div className="mt-16 pt-12 border-t border-gray-200">
+          <p className="text-center text-sm text-[#718096] mb-6">TRUSTED BY LEADING BUSINESSES</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
+            {clients.map((client, index) => (
+              <span key={index} className="text-lg font-semibold text-[#A0AEC0] hover:text-[#0A346C] transition-colors cursor-default">
+                {client}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

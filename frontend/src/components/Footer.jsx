@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Mail, ArrowUp } from 'lucide-react';
+import { Phone, Mail, ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Footer = ({ scrollToContact }) => {
@@ -29,31 +29,31 @@ const Footer = ({ scrollToContact }) => {
   };
 
   return (
-    <footer data-testid="footer" className="bg-[#050505] border-t border-white/10">
+    <footer data-testid="footer" className="bg-[#0A346C] text-white">
       {/* CTA Banner */}
-      <div className="py-16 bg-gradient-to-r from-[#FFD700]/10 to-transparent">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+      <div className="py-16 bg-gradient-to-r from-[#0A346C] to-[#3A5A85]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Ready to Build Your Website?
           </h2>
-          <p className="text-[#A1A1AA] mb-8 max-w-xl mx-auto">
-            Start your business online today. Get your website ready in just 5 days.
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">
+            Start your business online today. Get your professional website ready in just 5 days.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button
               onClick={scrollToContact}
-              className="bg-[#FFD700] text-black font-bold hover:bg-[#FFF0A0] rounded-none px-8 py-6 btn-shine"
+              className="bg-white text-[#0A346C] font-semibold hover:bg-gray-100 rounded-lg px-8 py-6"
               data-testid="footer-get-started-btn"
             >
-              Get Started
+              Get Free Quote
             </Button>
             <Button
               onClick={handleWhatsApp}
               variant="outline"
-              className="border-white/20 text-white hover:bg-white/5 rounded-none px-8 py-6"
+              className="border-white text-white hover:bg-white/10 rounded-lg px-8 py-6"
               data-testid="footer-whatsapp-btn"
             >
-              <MessageCircle className="mr-2" size={18} />
+              <Phone className="mr-2" size={18} />
               WhatsApp Now
             </Button>
           </div>
@@ -61,47 +61,49 @@ const Footer = ({ scrollToContact }) => {
       </div>
 
       {/* Main Footer */}
-      <div className="py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-12 gap-8 md:gap-12">
+      <div className="py-16 bg-[#082a56]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-12 gap-8">
             {/* Brand Column */}
             <div className="col-span-12 md:col-span-4">
-              <a href="/" className="inline-block mb-6" data-testid="footer-logo">
-                <span className="text-2xl font-black tracking-tight text-white">
-                  webbuild<span className="text-[#FFD700]">247</span>
+              <a href="/" className="inline-flex items-center gap-2 mb-6" data-testid="footer-logo">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                  <span className="text-[#0A346C] font-bold text-xl">D</span>
+                </div>
+                <span className="text-xl font-bold">
+                  DevYug<span className="text-white/70">Solutions</span>
                 </span>
               </a>
-              <p className="text-sm text-[#A1A1AA] leading-relaxed mb-6">
-                Fast, affordable, AI-powered website development. 
-                Get your professional website in 2-5 days.
+              <p className="text-white/70 text-sm leading-relaxed mb-6">
+                Professional web development services. Get your website ready in 2-5 days with quality and care.
               </p>
               <div className="flex gap-3">
                 <a 
-                  href="mailto:porwal027@gmail.com"
-                  className="p-3 bg-white/5 border border-white/10 hover:border-[#FFD700]/50 transition-colors"
+                  href="mailto:hello@devyugsolutions.com"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
                   data-testid="footer-email-icon"
                 >
-                  <Mail size={18} className="text-[#A1A1AA]" />
+                  <Mail size={18} />
                 </a>
                 <button 
                   onClick={handleWhatsApp}
-                  className="p-3 bg-white/5 border border-white/10 hover:border-[#25D366]/50 transition-colors"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
                   data-testid="footer-whatsapp-icon"
                 >
-                  <MessageCircle size={18} className="text-[#A1A1AA]" />
+                  <Phone size={18} />
                 </button>
               </div>
             </div>
 
             {/* Services Links */}
             <div className="col-span-6 md:col-span-2">
-              <h4 className="text-sm font-semibold text-white mb-4">Services</h4>
+              <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
                     <a 
                       href={link.href}
-                      className="text-sm text-[#A1A1AA] hover:text-white transition-colors"
+                      className="text-sm text-white/70 hover:text-white transition-colors"
                     >
                       {link.label}
                     </a>
@@ -112,13 +114,13 @@ const Footer = ({ scrollToContact }) => {
 
             {/* Company Links */}
             <div className="col-span-6 md:col-span-2">
-              <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
+              <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-3">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
                     <a 
                       href={link.href}
-                      className="text-sm text-[#A1A1AA] hover:text-white transition-colors"
+                      className="text-sm text-white/70 hover:text-white transition-colors"
                     >
                       {link.label}
                     </a>
@@ -129,15 +131,15 @@ const Footer = ({ scrollToContact }) => {
 
             {/* Contact Info */}
             <div className="col-span-12 md:col-span-4">
-              <h4 className="text-sm font-semibold text-white mb-4">Contact</h4>
-              <div className="space-y-3">
-                <p className="text-sm text-[#A1A1AA]">
-                  <span className="text-white">Email:</span> porwal027@gmail.com
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <div className="space-y-3 text-sm">
+                <p className="text-white/70">
+                  <span className="text-white">Email:</span> hello@devyugsolutions.com
                 </p>
-                <p className="text-sm text-[#A1A1AA]">
+                <p className="text-white/70">
                   <span className="text-white">WhatsApp:</span> +91 7771834791
                 </p>
-                <p className="text-sm text-[#A1A1AA]">
+                <p className="text-white/70">
                   <span className="text-white">Response:</span> Within 24 hours
                 </p>
               </div>
@@ -147,17 +149,17 @@ const Footer = ({ scrollToContact }) => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="py-6 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-[#A1A1AA]">
-            © {new Date().getFullYear()} webbuild247.com. All rights reserved.
+      <div className="py-6 bg-[#06203f] border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-white/60">
+            © {new Date().getFullYear()} DevYug Solutions. All rights reserved.
           </p>
           <button 
             onClick={scrollToTop}
-            className="p-2 border border-white/10 hover:border-white/30 transition-colors"
+            className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
             data-testid="scroll-to-top-btn"
           >
-            <ArrowUp size={18} className="text-[#A1A1AA]" />
+            <ArrowUp size={18} />
           </button>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = ({ scrollToContact }) => {
@@ -31,26 +31,29 @@ const Header = ({ scrollToContact }) => {
       data-testid="header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-[#050505]/90 backdrop-blur-xl border-b border-white/10' 
-          : 'bg-transparent'
+          ? 'bg-white shadow-md' 
+          : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2" data-testid="logo">
-            <span className="text-2xl font-black tracking-tight text-white">
-              webbuild<span className="text-[#FFD700]">247</span>
+            <div className="w-10 h-10 bg-[#0A346C] rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">D</span>
+            </div>
+            <span className="text-xl font-bold text-[#0A346C] hidden sm:block">
+              DevYug<span className="text-[#3A5A85]">Solutions</span>
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8" data-testid="desktop-nav">
+          <nav className="hidden lg:flex items-center gap-8" data-testid="desktop-nav">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-[#A1A1AA] hover:text-white transition-colors"
+                className="text-sm font-medium text-[#4A5568] hover:text-[#0A346C] transition-colors"
                 data-testid={`nav-${item.label.toLowerCase()}`}
               >
                 {item.label}
@@ -59,27 +62,28 @@ const Header = ({ scrollToContact }) => {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
             <Button
               variant="outline"
               onClick={handleWhatsApp}
-              className="border-white/20 text-white hover:bg-white/5 hover:border-white/40 rounded-none"
+              className="border-[#0A346C] text-[#0A346C] hover:bg-[#0A346C] hover:text-white rounded-lg"
               data-testid="header-whatsapp-btn"
             >
+              <Phone size={16} className="mr-2" />
               WhatsApp
             </Button>
             <Button
               onClick={scrollToContact}
-              className="bg-[#FFD700] text-black font-bold hover:bg-[#FFF0A0] rounded-none btn-shine"
+              className="bg-[#0A346C] text-white hover:bg-[#0D4080] rounded-lg px-6"
               data-testid="header-get-started-btn"
             >
-              Get Started
+              Get Free Quote
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white p-2"
+            className="lg:hidden text-[#0A346C] p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             data-testid="mobile-menu-btn"
           >
@@ -89,24 +93,25 @@ const Header = ({ scrollToContact }) => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-white/10" data-testid="mobile-menu">
+          <div className="lg:hidden py-6 border-t border-gray-100" data-testid="mobile-menu">
             <nav className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-lg font-medium text-[#A1A1AA] hover:text-white transition-colors"
+                  className="text-base font-medium text-[#4A5568] hover:text-[#0A346C] transition-colors py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-white/10">
+              <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-gray-100">
                 <Button
                   variant="outline"
                   onClick={handleWhatsApp}
-                  className="border-white/20 text-white hover:bg-white/5 rounded-none w-full"
+                  className="border-[#0A346C] text-[#0A346C] hover:bg-[#0A346C] hover:text-white rounded-lg w-full"
                 >
+                  <Phone size={16} className="mr-2" />
                   WhatsApp
                 </Button>
                 <Button
@@ -114,9 +119,9 @@ const Header = ({ scrollToContact }) => {
                     scrollToContact();
                     setIsMobileMenuOpen(false);
                   }}
-                  className="bg-[#FFD700] text-black font-bold hover:bg-[#FFF0A0] rounded-none w-full"
+                  className="bg-[#0A346C] text-white hover:bg-[#0D4080] rounded-lg w-full"
                 >
-                  Get Started
+                  Get Free Quote
                 </Button>
               </div>
             </nav>

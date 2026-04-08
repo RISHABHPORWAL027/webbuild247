@@ -12,7 +12,6 @@ import PortfolioSection from "@/components/PortfolioSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
-import BlogSection from "@/components/BlogSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -26,6 +25,20 @@ function App() {
   // Update page title
   React.useEffect(() => {
     document.title = "DevYug Solutions - Professional Web Development in 2-5 Days";
+    
+    // Remove "Made with Emergent" badge
+    const removeBadge = () => {
+      const badges = document.querySelectorAll('[class*="emergent"], [data-emergent], a[href*="emergent"]');
+      badges.forEach(el => {
+        if (el.textContent?.toLowerCase().includes('emergent') || el.textContent?.toLowerCase().includes('made with')) {
+          el.style.display = 'none';
+        }
+      });
+    };
+    removeBadge();
+    const observer = new MutationObserver(removeBadge);
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -43,7 +56,6 @@ function App() {
         <WhyChooseUsSection />
         <TestimonialsSection />
         <FAQSection />
-        <BlogSection />
         <div ref={contactRef}>
           <ContactSection />
         </div>

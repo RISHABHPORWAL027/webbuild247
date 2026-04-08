@@ -19,7 +19,6 @@ const Header = ({ scrollToContact }) => {
     { label: 'Services', href: '#services' },
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'FAQ', href: '#faq' },
-    { label: 'Blog', href: '#blog' },
   ];
 
   const handleWhatsApp = () => {

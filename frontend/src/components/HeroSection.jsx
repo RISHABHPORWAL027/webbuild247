@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Clock, Shield, Award, Users } from 'lucide-react';
+import { ArrowRight, CheckCircle, Clock, Shield, Award, IndianRupee } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = ({ scrollToContact }) => {
@@ -59,12 +59,23 @@ const HeroSection = ({ scrollToContact }) => {
               Professional website development in just 2-5 days. We combine modern technology with expert craftsmanship to deliver websites that convert visitors into customers.
             </p>
 
+            <div className="inline-flex max-w-xl items-start gap-4 rounded-2xl border border-[#0A346C]/10 bg-[#F8FBFF] px-5 py-4 mb-8 animate-fade-in-up opacity-0 stagger-4 shadow-sm">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0A346C] text-white">
+                <IndianRupee size={20} />
+              </div>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#0A346C]">Starting Offer</p>
+                <p className="text-xl font-bold text-[#1A1A2E] sm:text-2xl">Website Development starts at ₹4,999</p>
+                <p className="text-sm text-[#4A5568] mt-1">A clean, conversion-focused website package for businesses ready to get online fast.</p>
+              </div>
+            </div>
+
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-10 animate-fade-in-up opacity-0 stagger-4">
               <Button
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-[#0A346C] text-white hover:bg-[#0D4080] rounded-lg px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="h-14 border-2 border-transparent bg-[#0A346C] text-white hover:bg-[#0D4080] rounded-lg px-8 text-base font-semibold shadow-lg hover:shadow-xl transition-all"
                 data-testid="hero-get-started-btn"
               >
                 Get Free Consultation
@@ -74,7 +85,7 @@ const HeroSection = ({ scrollToContact }) => {
                 onClick={handleWhatsApp}
                 variant="outline"
                 size="lg"
-                className="border-2 border-[#0A346C] text-[#0A346C] hover:bg-[#0A346C] hover:text-white rounded-lg px-8 py-6 text-base font-semibold"
+                className="h-14 border-2 border-[#0A346C] text-[#0A346C] hover:bg-[#0A346C] hover:text-white rounded-lg px-8 text-base font-semibold"
                 data-testid="hero-whatsapp-btn"
               >
                 Chat on WhatsApp
@@ -124,7 +135,7 @@ const HeroSection = ({ scrollToContact }) => {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl p-4 shadow-xl border border-gray-100 hidden lg:block">
+              <div className="absolute -bottom-12 -left-12 bg-white rounded-xl p-4 shadow-xl border border-gray-100 hidden lg:block">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                     <CheckCircle className="text-green-600" size={24} />

@@ -69,8 +69,8 @@ const ServicesSection = () => {
               <h3 className="text-xl font-semibold text-[#1A1A2E] mb-3">{service.title}</h3>
               <p className="text-[#4A5568] mb-4 leading-relaxed">{service.description}</p>
               <div className="flex items-center text-[#0A346C] font-medium group-hover:gap-2 transition-all">
-                <span>Learn more</span>
-                <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                {/* <span>Learn more</span> */}
+                {/* <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" /> */}
               </div>
             </div>
           ))}

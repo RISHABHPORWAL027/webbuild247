@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Users, DollarSign, Smartphone, RefreshCw, Heart, CheckCircle } from 'lucide-react';
+import { Zap, Users, DollarSign, Smartphone, RefreshCw, Heart, CheckCircle, Shield } from 'lucide-react';
 
 const WhyChooseUsSection = () => {
   const reasons = [
@@ -95,12 +95,14 @@ const WhyChooseUsSection = () => {
               ))}
             </div>
 
-            <div className="mt-8 p-4 bg-[#0A346C]/5 rounded-xl border border-[#0A346C]/10">
-              <p className="text-center">
-                <span className="text-[#0A346C] font-semibold">100% Satisfaction Guarantee</span>
-                <br />
-                <span className="text-sm text-[#718096]">We work until you're completely happy</span>
-              </p>
+            <div className="mt-8 inline-flex w-full max-w-xl items-start gap-4 rounded-2xl border border-[#0A346C]/10 bg-[#F8FBFF] px-5 py-4 shadow-sm">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0A346C] text-white">
+                <Shield size={20} />
+              </div>
+              <div>
+                <p className="text-xl font-bold text-[#1A1A2E] sm:text-2xl">100% Satisfaction Guarantee</p>
+                <p className="text-sm text-[#4A5568] mt-1">We work until you're completely happy</p>
+              </div>
             </div>
           </div>
         </div>

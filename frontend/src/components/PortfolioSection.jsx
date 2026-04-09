@@ -1,6 +1,8 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 
+const witmatesLogo = `${process.env.PUBLIC_URL}/witmates_logo.webp`;
+
 const PortfolioSection = () => {
   const projects = [
     {
@@ -44,6 +46,13 @@ const PortfolioSection = () => {
       url: 'https://assitly-ai-ui-mspi.vercel.app/#',
       category: 'SaaS',
       image: 'https://customer-assets.emergentagent.com/job_quick-launch-109/artifacts/4i0dl5q4_image.png'
+    },
+    {
+      title: 'Witmates',
+      description: 'Recruitment and staffing website',
+      url: 'https://www.witmates.com/',
+      category: 'Business',
+      image: witmatesLogo
     }
   ];
 

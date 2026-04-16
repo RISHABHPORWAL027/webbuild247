@@ -43,7 +43,7 @@ const PortfolioSection = () => {
     {
       title: 'Assitly AI',
       description: 'AI assistant platform UI',
-      url: 'https://assitly-ai-ui-mspi.vercel.app/#',
+      url: 'http://assistlyai.co.in/',
       category: 'SaaS',
       image: 'https://customer-assets.emergentagent.com/job_quick-launch-109/artifacts/4i0dl5q4_image.png'
     },

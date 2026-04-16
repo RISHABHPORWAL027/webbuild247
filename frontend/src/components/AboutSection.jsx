@@ -47,20 +47,34 @@ const AboutSection = () => {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                <p className="text-3xl font-bold text-[#0A346C]">10+</p>
-                <p className="text-sm text-[#718096]">Projects</p>
-              </div>
-              <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                <p className="text-3xl font-bold text-[#0A346C]">100%</p>
-                <p className="text-sm text-[#718096]">Satisfaction</p>
-              </div>
-              <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                <p className="text-3xl font-bold text-[#0A346C]">5+</p>
-                <p className="text-sm text-[#718096]">Years Exp.</p>
-              </div>
-            </div>
+<div className="grid grid-cols-3 gap-3 text-center">
+  <div className="p-3 bg-white rounded-xl shadow-sm flex flex-col items-center justify-center">
+    <p className="text-lg sm:text-3xl font-bold text-[#0A346C] leading-tight">
+      10+
+    </p>
+    <p className="text-[10px] sm:text-sm text-[#718096] leading-tight">
+      Projects
+    </p>
+  </div>
+
+  <div className="p-3 bg-white rounded-xl shadow-sm flex flex-col items-center justify-center">
+    <p className="text-lg sm:text-3xl font-bold text-[#0A346C] leading-tight">
+      100%
+    </p>
+    <p className="text-[10px] sm:text-sm text-[#718096] leading-tight">
+      Satisfaction
+    </p>
+  </div>
+
+  <div className="p-3 bg-white rounded-xl shadow-sm flex flex-col items-center justify-center">
+    <p className="text-lg sm:text-3xl font-bold text-[#0A346C] leading-tight">
+      5+
+    </p>
+    <p className="text-[10px] sm:text-sm text-[#718096] leading-tight">
+      Years Exp.
+    </p>
+  </div>
+</div>
           </div>
 
           {/* Values Grid */}

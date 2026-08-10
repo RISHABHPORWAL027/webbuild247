@@ -1,5 +1,7 @@
 import React from 'react';
 import { Zap, Target, Shield, TrendingUp } from 'lucide-react';
+import Typewriter from '@/components/Typewriter';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const AIBenefitsSection = () => {
   const benefits = [
@@ -30,7 +32,7 @@ const AIBenefitsSection = () => {
   ];
 
   return (
-    <section data-testid="ai-benefits-section" className="py-20 lg:py-28 bg-white">
+    <section data-testid="ai-benefits-section" className="py-20 lg:py-28 bg-white overflow-hidden border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -38,7 +40,7 @@ const AIBenefitsSection = () => {
             Our Approach
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A2E] mb-4">
-            How We Deliver Excellence
+            <Typewriter text="How We Deliver Excellence" />
           </h2>
           <p className="text-lg text-[#4A5568]">
             We've perfected our development process to deliver exceptional results faster and more affordably than traditional agencies.
@@ -48,26 +50,25 @@ const AIBenefitsSection = () => {
         {/* Benefits Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {benefits.map((benefit, index) => (
-            <div 
-              key={index}
-              className="flex gap-6 p-6 bg-[#F6F6F6] rounded-xl hover:bg-white hover:shadow-lg transition-all border border-transparent hover:border-gray-200"
-              data-testid={`ai-benefit-${index}`}
-            >
-              <div className="flex-shrink-0">
-                <div className="w-14 h-14 bg-[#0A346C] rounded-xl flex items-center justify-center">
-                  <benefit.icon size={28} className="text-white" />
+            <ScrollReveal key={index} delay={`${(index + 1) * 100}ms`}>
+              <div 
+                className="flex items-start gap-4 p-6 bg-[#F6F6F6] rounded-xl hover:shadow-md transition-shadow duration-300 border border-gray-100 text-left h-full"
+                data-testid={`ai-benefit-${index}`}
+              >
+                <div className="w-12 h-12 rounded-lg bg-[#0A346C] flex items-center justify-center shrink-0">
+                  <benefit.icon className="text-white" size={24} />
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-lg font-semibold text-[#1A1A2E]">{benefit.title}</h3>
+                    <span className="text-xs bg-[#0A346C]/10 text-[#0A346C] font-semibold px-2.5 py-0.5 rounded-full">
+                      {benefit.highlight}
+                    </span>
+                  </div>
+                  <p className="text-sm text-[#4A5568] leading-relaxed">{benefit.description}</p>
                 </div>
               </div>
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-xl font-semibold text-[#1A1A2E]">{benefit.title}</h3>
-                  <span className="px-3 py-1 bg-[#0A346C]/10 text-[#0A346C] text-xs font-semibold rounded-full">
-                    {benefit.highlight}
-                  </span>
-                </div>
-                <p className="text-[#4A5568] leading-relaxed">{benefit.description}</p>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

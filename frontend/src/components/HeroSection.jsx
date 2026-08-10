@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArrowRight, CheckCircle, Clock, Shield, Award, IndianRupee } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import CountUp from '@/components/CountUp';
+import Typewriter from '@/components/Typewriter';
 
 const HeroSection = ({ scrollToContact }) => {
   const handleWhatsApp = () => {
@@ -13,14 +15,10 @@ const HeroSection = ({ scrollToContact }) => {
     { icon: Award, text: 'Premium Quality' },
   ];
 
-  const clients = [
-    'Ayekart', 'Vyan Villa', 'Uplers', 'Mobibulls', 'ARC Robotics'
-  ];
-
   return (
     <section 
       data-testid="hero-section"
-      className="relative pt-20 overflow-hidden bg-white"
+      className="relative pt-20 pb-16 overflow-hidden bg-white"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]"
@@ -30,11 +28,11 @@ const HeroSection = ({ scrollToContact }) => {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left Content */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 text-left">
             {/* Trust indicator */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#F6F6F6] rounded-full mb-6 animate-fade-in-up opacity-0 stagger-1">
               <div className="flex -space-x-2">
@@ -44,12 +42,14 @@ const HeroSection = ({ scrollToContact }) => {
                   </div>
                 ))}
               </div>
-              <span className="text-sm text-[#4A5568]">Trusted by <strong className="text-[#0A346C]">10+ businesses</strong></span>
+              <span className="text-sm text-[#4A5568]">
+                Trusted by <strong className="text-[#0A346C]"><CountUp end="25" suffix="+" /> businesses</strong>
+              </span>
             </div>
 
             {/* Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1A2E] leading-tight mb-6 animate-fade-in-up opacity-0 stagger-2">
-              We Build Websites
+              <Typewriter text="We Build Websites" />
               <br />
               <span className="text-[#0A346C]">That Grow Your Business</span>
             </h1>
@@ -65,7 +65,9 @@ const HeroSection = ({ scrollToContact }) => {
               </div>
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#0A346C]">Starting Offer</p>
-                <p className="text-xl font-bold text-[#1A1A2E] sm:text-2xl">Website Development starts at ₹4,999</p>
+                <p className="text-xl font-bold text-[#1A1A2E] sm:text-2xl">
+                  Website Development starts at ₹<CountUp end="9999" />
+                </p>
                 <p className="text-sm text-[#4A5568] mt-1">A clean, conversion-focused website package for businesses ready to get online fast.</p>
               </div>
             </div>
@@ -110,18 +112,20 @@ const HeroSection = ({ scrollToContact }) => {
             <div className="relative">
               {/* Main Card */}
               <div className="bg-gradient-to-br from-[#0A346C] to-[#3A5A85] rounded-2xl p-8 lg:p-10 text-white shadow-2xl">
-                <h3 className="text-2xl font-bold mb-8">Why Choose DevYug?</h3>
+                <h3 className="text-2xl font-bold mb-8 font-display">Why Choose DevYug?</h3>
                 
                 <div className="space-y-6">
                   {[
-                    { number: '10+', label: 'Projects Delivered' },
-                    { number: '2-5', label: 'Days Turnaround' },
-                    { number: '100%', label: 'Client Satisfaction' },
-                    { number: '24/7', label: 'Support Available' },
+                    { end: '25', suffix: '+', label: 'Projects Delivered' },
+                    { end: '5', prefix: '2-', label: 'Days Turnaround' },
+                    { end: '100', suffix: '%', label: 'Client Satisfaction' },
+                    { end: '24', suffix: '/7', label: 'Support Available' },
                   ].map((stat, index) => (
                     <div key={index} className="flex items-center gap-4 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
-                      <span className="text-3xl font-bold">{stat.number}</span>
-                      <span className="text-white/90">{stat.label}</span>
+                      <span className="text-3xl font-bold font-display">
+                        <CountUp end={stat.end} prefix={stat.prefix} suffix={stat.suffix} />
+                      </span>
+                      <span className="text-white/90 text-sm font-medium">{stat.label}</span>
                     </div>
                   ))}
                 </div>
@@ -147,18 +151,6 @@ const HeroSection = ({ scrollToContact }) => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Clients Section */}
-        <div className="mt-16 pt-12 border-t border-gray-200">
-          <p className="text-center text-sm text-[#718096] mb-6">TRUSTED BY LEADING BUSINESSES</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
-            {clients.map((client, index) => (
-              <span key={index} className="text-lg font-semibold text-[#A0AEC0] hover:text-[#0A346C] transition-colors cursor-default">
-                {client}
-              </span>
-            ))}
           </div>
         </div>
       </div>

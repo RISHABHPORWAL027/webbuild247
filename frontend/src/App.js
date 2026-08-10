@@ -11,9 +11,9 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import Modal from "@/components/Modal";
 
 function App() {
   const contactRef = useRef(null);
@@ -49,18 +49,18 @@ function App() {
         <HeroSection scrollToContact={scrollToContact} />
         <AboutSection />
         <AIBenefitsSection />
+        <PortfolioSection />
         <FeaturesSection />
         <ServicesSection />
         <HowItWorksSection />
-        <PortfolioSection />
         <WhyChooseUsSection />
         <TestimonialsSection />
-        <FAQSection />
         <div ref={contactRef}>
           <ContactSection />
         </div>
       </main>
       <Footer scrollToContact={scrollToContact} />
+      <Modal />
     </div>
   );
 }
